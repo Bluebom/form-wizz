@@ -1,4 +1,40 @@
 $circle: 72px;
+@media (max-width: 500px) {
+    $circle: 48px !important;
+    .steps {
+        ul[role="tablist"] {
+          li {
+            a,
+            a:hover,
+            a:active {
+              width: $circle;
+              height: $circle;
+              span {
+                .current-info.audible {
+                  display: none;
+                }
+                i {
+                  color: #ffffff;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  font-size: 2rem !important;
+                  line-height: 2rem !important;
+                }
+              }
+            }
+          }
+  
+          li.disabled {
+            
+            width: $circle;
+            height: $circle;
+           
+          }
+        }
+      }
+}
 $color: #606060;
 body {
   background: #eee !important;
@@ -15,7 +51,6 @@ body {
         width: 100%;
         display: flex;
         justify-content: space-between;
-
         li {
           width: auto;
           a,
@@ -26,6 +61,7 @@ body {
             height: $circle;
             border-radius: 100%;
             position: relative;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 10%);
             span {
               .current-info.audible {
                 display: none;
@@ -79,3 +115,5 @@ body {
     }
   }
 }
+
+

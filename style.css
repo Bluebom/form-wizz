@@ -1,3 +1,33 @@
+@media (max-width: 500px) {
+  .steps ul[role="tablist"] li a,
+  .steps ul[role="tablist"] li a:hover,
+  .steps ul[role="tablist"] li a:active {
+    width: 48px !important;
+    height: 48px !important;
+  }
+  .steps ul[role="tablist"] li a span .current-info.audible,
+  .steps ul[role="tablist"] li a:hover span .current-info.audible,
+  .steps ul[role="tablist"] li a:active span .current-info.audible {
+    display: none;
+  }
+  .steps ul[role="tablist"] li a span i,
+  .steps ul[role="tablist"] li a:hover span i,
+  .steps ul[role="tablist"] li a:active span i {
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-size: 2rem !important;
+    line-height: 2rem !important;
+  }
+  .steps ul[role="tablist"] li.disabled {
+    width: 48px !important;
+    height: 48px !important;
+  }
+}
+
 body {
   background: #eee !important;
 }
@@ -35,6 +65,8 @@ body .wizard .steps ul[role="tablist"] li a:active {
   height: 72px;
   border-radius: 100%;
   position: relative;
+  -webkit-box-shadow: 0 0 8px black;
+          box-shadow: 0 0 8px black;
 }
 
 body .wizard .steps ul[role="tablist"] li a span .current-info.audible,
